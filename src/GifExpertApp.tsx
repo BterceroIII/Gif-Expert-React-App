@@ -6,19 +6,22 @@ export default function GifExpertApp() {
 
   const [categories, setCategories] = useState(['One Punch', 'Dragon Ball']);
   
-  const onAddCategory = () => {
-    setCategories(prevCategories => [...prevCategories, 'HunterXHunter']);
+  const onAddCategory = (newCategory: string) => {
+    if (categories.includes(newCategory)) return;
+    setCategories([newCategory, ...categories]);
   }
 
   return (
     <>
         <h1>GifExpertApp</h1>
-        <AddCategory />
-        <button onClick={onAddCategory}>Agregar</button>
+        <AddCategory 
+            //setCategories={setCategories}
+            onNewCategory={onAddCategory}
+        />
         <ol>
           {
             categories.map(categories => {
-              return <li key={categories}>{categories}</li>
+                return <li key={categories}>{categories}</li>
             })
           }
         </ol>
