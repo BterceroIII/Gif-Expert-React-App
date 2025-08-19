@@ -1,10 +1,4 @@
-export interface Gif {
-    id: string;
-    title: string;
-    url: string;
-    width: number;
-    height: number;
-  }
+import type { Gif } from "../gifs/interfaces/gif.interface";
   
   export const mockGifs: Gif[] = [
     {
@@ -17,7 +11,7 @@ export interface Gif {
     {
       id: '2',
       title: 'Funny Cat',
-      url: 'https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif',
+      url: 'https://media1.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif',
       width: 400,
       height: 250,
     },
@@ -31,7 +25,7 @@ export interface Gif {
     {
       id: '4',
       title: 'Thumbs Up',
-      url: 'https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif',
+      url: 'https://media1.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif',
       width: 300,
       height: 200,
     },
